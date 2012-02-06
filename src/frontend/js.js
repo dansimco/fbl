@@ -695,8 +695,8 @@ Button = (function(element,params){
 	element.setStyle('-webkit-tap-highlight-color','rgba(255,255,255,0)');
   return self;
 });
-window.addEvent('fbready',function(){
-  console.log('init');  
+window.addEvent('fbReady',function(){
+  console.log('init fb ready');  
 });
 
 templates = {};

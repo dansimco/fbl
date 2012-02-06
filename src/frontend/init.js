@@ -1,3 +1,3 @@
-window.addEvent('fbready',function(){
-  console.log('init');  
+window.addEvent('fbReady',function(){
+  console.log('init fb ready');  
 });
