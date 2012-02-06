@@ -698,6 +698,11 @@ Button = (function(element,params){
 window.addEvent('fbReady',function(){
   console.log('facebook Ready');  
   
+  FB.getLoginStatus(function(response) {
+    console.log(response);
+    
+  });
+  
   renderView('main').inject(document.body);
 
   new Button(document.id('fb_auth'),{
