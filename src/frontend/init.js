@@ -13,7 +13,7 @@ window.addEvent('fbReady',function(){
         response.data.each(function(post){
           console.log(post);
           var p = new Post(post);
-          p.render().inject(view);
+          p.render().inject($$('timeline')[0]);
         });
       });
       
