@@ -695,5 +695,8 @@ Button = (function(element,params){
 	element.setStyle('-webkit-tap-highlight-color','rgba(255,255,255,0)');
   return self;
 });
-console.log('init');
+window.addEvent('fbready',function(){
+  console.log('init');  
+});
+
 templates = {};
