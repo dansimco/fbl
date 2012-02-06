@@ -20,7 +20,9 @@
         cookie     : true, // enable cookies to allow the server to access the session
         xfbml      : false  // parse XFBML
       });
+      
       window.fireEvent('fbReady');
+      console.log('fbready');
       
       FB.login(function(response) {
         if (response.authResponse) {
