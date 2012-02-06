@@ -5,9 +5,9 @@ javascript:
     directory: "."
     compress: false
     prioritize:
-      -"mootools.js"
+      - "mootools.js"
     ignore: 
-      -"js.js"
+      - "js.js"
 
 
 css:
