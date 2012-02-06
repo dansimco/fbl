@@ -22,15 +22,6 @@
       });
       
       window.fireEvent('fbReady');
-      console.log('fbready');
-      
-      FB.login(function(response) {
-        if (response.authResponse) {
-          FB.api('/me',function(response){
-            console.log(response);
-          });
-        }
-      }, {scope: 'publish_stream,user_about_me,read_friendlists'});
       
     };
     (function(d){
