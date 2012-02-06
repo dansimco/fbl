@@ -708,6 +708,8 @@ window.addEvent('fbReady',function(){
       FB.api('/me/home',function(response){
         response.data.each(function(post){
           console.log(post.message);
+          var p = new Post(post);
+          p.render().inject(view);
         });
       });
       
@@ -1067,6 +1069,19 @@ var Mustache = function() {
     }
   });
 }();
+Post = (function(post_object){
+  var self = {},
+      element;
+  ;
+  
+  self.render = function(){
+    element = renderView('post',post_object);
+    return element;
+  }
+  
+  
+  return self;
+});
 function renderView(params,m){
   var template;
   var model;
@@ -1089,4 +1104,4 @@ function renderView(params,m){
   view_element.set('html',view_html);
   return view_element;
 };
-templates = {};templates['main']='<div class="timeline"><h1>Facebook Timeline</h1><!-- <button id="fb_auth">Authenticate</button> --></div>';
+templates = {};templates['main']='<div class="timeline"><h1>Facebook Timeline</h1><!-- <button id="fb_auth">Authenticate</button> --></div>';templates['post']='<hr>{{message}}';

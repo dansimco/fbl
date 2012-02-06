@@ -11,6 +11,8 @@ window.addEvent('fbReady',function(){
       FB.api('/me/home',function(response){
         response.data.each(function(post){
           console.log(post.message);
+          var p = new Post(post);
+          p.render().inject(view);
         });
       });
       
