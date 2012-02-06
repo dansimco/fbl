@@ -11,7 +11,7 @@ window.addEvent('fbReady',function(){
             console.log(response);
           });
         }
-      }, {scope: 'publish_stream,user_about_me,read_friendlists'});      
+      }, {scope: 'publish_stream,user_about_me,read_friendlists,read_stream,read_requests,publish_stream'});      
     }
   });
 
