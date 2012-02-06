@@ -698,12 +698,20 @@ Button = (function(element,params){
 window.addEvent('fbReady',function(){
   console.log('facebook Ready');  
   
+  var view = renderView('main').inject(document.body);
+
   FB.getLoginStatus(function(response) {
-    console.log(response);
-    
+    if(response.status = "connected") {
+      FB.api('/me',function(response){
+        console.log(response);
+      });      
+    } else {
+      var auth_button = new Element('button.authenticate',{
+        'text':'Authenticate'
+      }).inject(view);
+    }
   });
-  
-  renderView('main').inject(document.body);
+
 
   new Button(document.id('fb_auth'),{
     click: function(){
@@ -1073,4 +1081,4 @@ function renderView(params,m){
   view_element.set('html',view_html);
   return view_element;
 };
-templates = {};templates['main']='<div class="timeline"><h1>Facebook Timeline</h1><button id="fb_auth">Authenticate</button></div>';
+templates = {};templates['main']='<div class="timeline"><h1>Facebook Timeline</h1><!-- <button id="fb_auth">Authenticate</button> --></div>';
