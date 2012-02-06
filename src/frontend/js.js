@@ -697,7 +697,8 @@ Button = (function(element,params){
 });
 window.addEvent('fbReady',function(){
   
-  var view = renderView('main').inject(document.body);
+  var view = renderView('main');
+  view.inject(document.body);
 
   FB.getLoginStatus(function(response) {
     if(response.status = "connected") {
