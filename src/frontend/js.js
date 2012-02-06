@@ -704,7 +704,14 @@ window.addEvent('fbReady',function(){
     if(response.status = "connected") {
       FB.api('/me',function(response){
         console.log(response);
-      });      
+      });
+      
+      FB.api('/me/home',function(response){
+        console.log(response);
+      });
+      
+      
+            
     } else {
       var auth_button = new Element('button.authenticate',{
         'text':'Authenticate'
