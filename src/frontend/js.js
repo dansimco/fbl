@@ -706,7 +706,7 @@ window.addEvent('fbReady',function(){
         console.log(response);
       });
       
-      FB.api('/home',function(response){
+      FB.api('/me/home',function(response){
         console.log(response);
       });
       
