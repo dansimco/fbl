@@ -3,6 +3,7 @@ Post = (function(post_object){
       element;
 
   console.log(post_object);
+  post_object.from_name = post_object.from.name;
   
   self.render = function(){
     element = renderView('post',post_object);
