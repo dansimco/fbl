@@ -708,8 +708,10 @@ window.addEvent('fbReady',function(){
       FB.api('/me/home',function(response){
         response.data.each(function(post){
           console.log(post);
-          var p = new Post(post);
-          p.render().inject(view.getElement('.timeline'));
+          if(typeof(post.from.category) == 'undefined'){
+            var p = new Post(post);
+            p.render().inject(view.getElement('.timeline'));
+          }
         });
       });   
     } else {
@@ -1068,6 +1070,7 @@ Post = (function(post_object){
 
 
   post_object.from_name = post_object.from.name;
+  
   console.log(post_object);
   
   self.render = function(){
