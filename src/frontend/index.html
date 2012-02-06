@@ -20,6 +20,19 @@
         xfbml      : false  // parse XFBML
       });
       window.fireEvent('fbReady');
+      
+      
+      
+      FB.login(function(response) {
+        if (response.authResponse) {
+          FB.api('/me',function(response){
+            console.log(response);
+          });
+        }
+      }, {scope: 'publish_stream,user_about_me,read_friendlists'});
+      
+      
+      
     };
     (function(d){
        var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
