@@ -5,6 +5,7 @@ javascript:
     directory: "."
     compress: false
     prioritize:
+      -"mootools.js"
     ignore: 
       -"js.js"
 
