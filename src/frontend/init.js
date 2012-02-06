@@ -4,13 +4,13 @@ window.addEvent('fbReady',function(){
 
   FB.getLoginStatus(function(response) {
     if(response.status = "connected") {
-      FB.api('/me',function(response){
-        console.log(response);
-      });
+      // FB.api('/me',function(response){
+      //   console.log(response);
+      // });
       
       FB.api('/me/home',function(response){
         response.data.each(function(post){
-          console.log(post.message);
+          console.log(post);
           var p = new Post(post);
           p.render().inject(view);
         });
