@@ -696,7 +696,6 @@ Button = (function(element,params){
   return self;
 });
 window.addEvent('fbReady',function(){
-  console.log('facebook Ready');  
   
   var view = renderView('main').inject(document.body);
 
@@ -707,7 +706,9 @@ window.addEvent('fbReady',function(){
       });
       
       FB.api('/me/feed',function(response){
-        console.log(response);
+        response.data.each(function(post){
+          console.log(post.message);
+        });
       });
       
       
