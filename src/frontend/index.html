@@ -11,6 +11,7 @@
   <script type="text/javascript" src="js.js"></script>
 </head>
   <body>
+    <div id="fb-root"></div>
     <script type="text/javascript" charset="utf-8">
     window.fbAsyncInit = function() {
       FB.init({
@@ -21,8 +22,6 @@
       });
       window.fireEvent('fbReady');
       
-      
-      
       FB.login(function(response) {
         if (response.authResponse) {
           FB.api('/me',function(response){
@@ -30,8 +29,6 @@
           });
         }
       }, {scope: 'publish_stream,user_about_me,read_friendlists'});
-      
-      
       
     };
     (function(d){
