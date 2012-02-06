@@ -1,0 +1,23 @@
+# FRONTENDLOADER CONFIG
+
+javascript:
+    framework: "mootools"
+    directory: "."
+    compress: false
+    prioritize:
+    ignore: 
+      -"js.js"
+
+
+css:
+    framework: "less"
+    directory: "."
+    prioritize: 
+    ignore: 
+
+      
+templates:
+    format: "mustache"
+    varname: "templates"
+    directory: "."
+    ignore: 

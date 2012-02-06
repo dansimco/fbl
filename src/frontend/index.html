@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Exploding Box Productions">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" href="style.css?v=1">
+  <script type="text/javascript" src="js.js"></script>
+</head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '386538894696020', // App ID
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : false  // parse XFBML
+      });
+      window.fireEvent('fbReady');
+    };
+    (function(d){
+       var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+       js = d.createElement('script'); js.id = id; js.async = true;
+       js.src = "//connect.facebook.net/en_US/all.js";
+       d.getElementsByTagName('head')[0].appendChild(js);
+     }(document));
+    </script>
+  </body>
+</html>
