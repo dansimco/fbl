@@ -8,7 +8,7 @@ window.addEvent('fbReady',function(){
         console.log(response);
       });
       
-      FB.api('/me/feed',function(response){
+      FB.api('/me/home',function(response){
         response.data.each(function(post){
           console.log(post.message);
         });
