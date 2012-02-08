@@ -1099,4 +1099,4 @@ function renderView(params,m){
   view_element.set('html',view_html);
   return view_element;
 };
-templates = {};templates['main']='<div class="timeline"><h1>Facebook Timeline</h1><!-- <button id="fb_auth">Authenticate</button> --></div>';templates['post']='<div class="post_body {{type}}"><div class="picture">{{#picture}}<img src="{{picture}}">{{/picture}}</div><p>{{message}}</p><p><small>{{from_name}}</small></p></div>';
+templates = {};templates['main']='<div class="timeline"><h1>Statuses</h1><!-- <button id="fb_auth">Authenticate</button> --></div>';templates['post']='<div class="post_body {{type}}"><div class="picture">{{#picture}}<img src="{{picture}}">{{/picture}}</div><p>{{message}}</p><p><small>{{from_name}}</small></p></div>';
