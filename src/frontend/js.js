@@ -704,7 +704,7 @@ window.addEvent('fbReady',function(){
         console.log(response);
         response.data.each(function(post){
           console.log(post);
-          if(typeof(post.from.category) == 'undefined' && post.type != 'photo'){
+          if(typeof(post.from.category) == 'undefined' && post.type == 'status'){
             var p = new Post(post);
             p.render().inject(view.getElement('.timeline'));
           }
