@@ -718,7 +718,7 @@ window.addEvent('fbReady',function(){
   var auth_button = new Element('button.authenticate',{
     'text':'Authenticate'
   }).inject(view);
-  new Button(document.id('fb_auth'),{
+  new Button(auth_button,{
     click: function(){
       FB.login(function(response) {
         if (response.authResponse) {
