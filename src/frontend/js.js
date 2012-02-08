@@ -700,7 +700,7 @@ window.addEvent('fbReady',function(){
   view.inject(document.body);
   FB.getLoginStatus(function(response) {
     if(response.status = "connected") {
-      FB.api('/me/home',{limit:50},function(response){
+      FB.api('/me/home',{limit:50,type:'status'},function(response){
         console.log(response);
         response.data.each(function(post){
           console.log(post);
