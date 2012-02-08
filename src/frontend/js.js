@@ -711,22 +711,24 @@ window.addEvent('fbReady',function(){
         });
       });
     } else {
-      var auth_button = new Element('button.authenticate',{
-        'text':'Authenticate'
-      }).inject(view);
-      new Button(document.id('fb_auth'),{
-        click: function(){
-          FB.login(function(response) {
-            if (response.authResponse) {
-              FB.api('/me',function(response){
-                console.log(response);
-              });
-            }
-          }, {scope: 'publish_stream,user_about_me,read_friendlists,read_stream,read_requests,publish_stream'});      
-        }
-      });
+      
     }
+    
   });  
+  var auth_button = new Element('button.authenticate',{
+    'text':'Authenticate'
+  }).inject(view);
+  new Button(document.id('fb_auth'),{
+    click: function(){
+      FB.login(function(response) {
+        if (response.authResponse) {
+          FB.api('/me',function(response){
+            console.log(response);
+          });
+        }
+      }, {scope: 'publish_stream,user_about_me,read_friendlists,read_stream,read_requests,publish_stream'});      
+    }
+  });
 });
 
 
